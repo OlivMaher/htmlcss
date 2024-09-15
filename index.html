@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <title>Practice</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <meta charset="utf-8">
+    <body>
+        <h1>Sales Form</h1>
+        <form id="myForm">
+            <div class="buyerInput">
+                <label>
+                    Name:
+                    <input type="text" name="buyerName" required>
+                </label>
+                <label>
+                    Street Adress:
+                    <input type="text" name="buyerAddress" required>
+                </label>
+                <label>
+                    City, State, Zip:
+                    <input type="text" name="buyerLocation" required>
+                </label>
+            </div>
+            <div class="table">
+                <table>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                    </tr>
+                    <tr>
+                        <td>Product 1</td>
+                        <td>$19.99</td>
+                        <td>
+                            <input type="number" min="0" max="99" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product 2</td>
+                        <td>$29.99</td>
+                        <td>
+                            <input type="number" min="0" max="99" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product 3</td>
+                        <td>$39.99</td>
+                        <td>
+                            <input type="number" min="0" max="99" required>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h2>Payment Method</h2>
+            <div class="paymentMethod">
+                <label>
+                    <input type="radio" name="payment" value="Visa" required>
+                    Visa
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="MasterCard" required>
+                    MasterCard
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="Discover" required>
+                    Discover
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="Check" required>
+                    Check
+                </label>
+            </div>
+            <div class="buttons">
+                <input type="submit" value="Submit">
+                <input type="reset">
+            </div>
+        </form>
+        <script>
+            const form = document.getElementById("myForm");
+            form.onsubmit = redirectToPage;
+        </script>
+    </body>
+</html>
